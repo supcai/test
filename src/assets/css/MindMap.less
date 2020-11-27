@@ -1,0 +1,323 @@
+div#mindmap {
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  div {
+    &.rightClickTrigger {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    &.button {
+      position: absolute;
+      &.right-bottom {
+        bottom: 0;
+        right: 0;
+      }
+      &.top-right {
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+      }
+      button {
+        &.icon {
+          position: relative;
+          cursor: pointer;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          border: 0;
+          color: #3f51b5;
+          &::before {
+            background-color: currentColor;
+            border-radius: inherit;
+            bottom: 0;
+            color: inherit;
+            content: "";
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+          }
+          &:focus {
+            outline: none;
+          }
+          &:hover {
+            &::before {
+              opacity: 0.1;
+            }
+          }
+          &.disabled {
+            cursor: default;
+            &:hover {
+              &::before {
+                opacity: 0;
+              }
+            }
+            i {
+              filter: invert(85%) sepia(20%) saturate(0%) hue-rotate(125deg) brightness(86%) contrast(93%);
+            }
+          }
+          i {
+            width: 24px;
+            height: 24px;
+            filter: invert(25%) sepia(40%) saturate(5050%) hue-rotate(227deg) brightness(78%) contrast(74%);
+            &.gps {
+              background-image: url(../images/crosshairs-gps.png);
+            }
+            &.fitView {
+              background-image: url(../images/fit-to-page-outline.png);
+            }
+            &.download {
+              background-image: url(../images/download.png);
+            }
+            &.undo {
+              background-image: url(../images/undo.png);
+            }
+            &.redo {
+              background-image: url(../images/redo.png);
+            }
+          }
+        }
+      }
+    }
+  }
+  div#dummy {
+    div {
+      white-space: pre-wrap;
+      width: max-content;
+    }
+  }
+  svg {
+    flex: auto;
+    outline: none;
+    background-color: rgba(245,246,250,1);
+    foreignObject {
+      cursor: pointer;
+      //border-radius: 3px;
+      border-radius: 4px;
+      border-width: 1px;
+      border-color: transparent;
+      border-style: solid;
+      background-color: #fff;
+      .textDiv {
+        border-radius: 4px;
+        background-color: #fff;
+      }
+      &:focus {
+        outline: none;
+      }
+      div {
+        text-align: left;
+        border: 1px solid transparent;
+        width: max-content;
+        white-space: pre-wrap;
+        color: #6d6d6d;
+        padding: 0 8px;
+        &:focus {
+          //border-color: #9a9a9a;
+          //outline: none;
+        }
+      }
+    }
+    g {
+      &.depth_0 {
+        &.node {
+          & > foreignObject {
+            background-color: white;
+            //border-radius: 5px;
+            border-radius: 4px;
+            //border-color: #1188FF;
+            div {
+              color: #4b4b4b;
+            }
+            .textDiv {
+              cursor: pointer;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              border-radius: 4px;
+              //padding: 0 8px;
+            }
+          }
+        }
+      }
+      &.gButton {
+        opacity: 1;
+        & > path {
+          fill: #fff;
+        }
+        & > rect {
+          //fill: white;
+          //stroke: #fff;
+          stroke-width: 0;
+          border-radius: 4px;
+          background-color: #6257CD;
+        }
+      }
+      &.delButton {
+        opacity: 1;
+        & > path {
+          fill: #fff;
+          //stroke-width: 2;
+        }
+        & > rect {
+          //fill: white;
+          //stroke: #fff;
+          stroke-width: 0;
+          border-radius: 4px;
+          background-color: #6257CD;
+        }
+      }
+    }
+    &.stroke-width-1 {
+      path {
+        stroke-width: 1;
+      }
+    }
+    &.stroke-width-2 {
+      path {
+        stroke-width: 2;
+      }
+    }
+    &.stroke-width-3 {
+      path {
+        stroke-width: 3;
+      }
+    }
+    &.stroke-width-4 {
+      path {
+        stroke-width: 4;
+      }
+    }
+    &.stroke-width-5 {
+      path {
+        stroke-width: 5;
+      }
+    }
+    &.stroke-width-6 {
+      path {
+        stroke-width: 6;
+      }
+    }
+    &.stroke-width-7 {
+      path {
+        stroke-width: 7;
+      }
+    }
+    &.stroke-width-8 {
+      path {
+        stroke-width: 8;
+      }
+    }
+    &.stroke-width-9 {
+      path {
+        stroke-width: 9;
+      }
+    }
+    &.stroke-width-10 {
+      path {
+        stroke-width: 10;
+      }
+    }
+    path {
+      fill: none;
+      stroke-linecap: round;
+    }
+    #selectedNode {
+      &:not(.depth_0) {
+        & > foreignObject {
+          background-color: rgba(0, 0, 255, 0.15);
+          border-radius: 4px;
+        }
+      }
+      &.depth_0 {
+        & > foreignObject {
+          outline: 3px solid;
+          outline-color: rgba(0, 0, 255, 0.15);
+          border-radius: 4px;
+        }
+      }
+    }
+    #newParentNode {
+      & > foreignObject {
+        border-color: rgba(0, 0, 255, 0.15);
+        border-radius: 4px;
+      }
+    }
+    #editing {
+      & > foreignObject {
+        background-color: #6257CD !important;
+        & > div {
+          background-color: #6257CD !important;
+          border-radius: 4px;
+          color: #fff;
+        }
+      }
+      //& > .gButton {
+      //  & > rect {
+      //    fill: red;
+      //    stroke-width: 0;
+      //  }
+      //  & > path {
+      //    stroke: #fff;
+      //    fill: red;
+      //  }
+      //}
+      //& > .delButton {
+      //  & > rect {
+      //    fill: red;
+      //    stroke-width: 0;
+      //  }
+      //  & > path {
+      //    stroke: #fff;
+      //    stroke-width: 3;
+      //    fill: #fff;
+      //  }
+      //}
+    }
+  }
+  #menu {
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    background-color: #fafafa;
+    padding: 4px 0;
+    &:focus {
+      outline: none;
+    }
+    .menu-item {
+      position: relative;
+      padding: 4px 8px;
+      cursor: pointer;
+      &::before {
+        background-color: black;
+        bottom: 0;
+        content: "";
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+      }
+      &:hover {
+        &::before {
+          opacity: 0.09;
+        }
+      }
+    }
+  }
+}
