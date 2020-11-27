@@ -1,0 +1,68 @@
+[
+  {
+    "name":"规则组名称",
+    "children":[
+      {
+        "name":"选择变量一",
+        "children":[
+          {
+            "name":"力度     风险提示性",
+            "children":[
+
+            ],
+            "firstNode":false,
+            "secondNode":false,
+            "otherNode":true,
+            "form":{
+              "selectNode":3,
+              "intensity":"风险提示性"
+            }
+          },
+          {
+            "name":"等于     选择变量二",
+            "children":[
+
+            ],
+            "firstNode":false,
+            "secondNode":false,
+            "otherNode":true,
+            "form":{
+              "selectNode":1,
+              "tiaojian":"等于",
+              "type":"bl",
+              "varLibrary":"区域一",
+              "varGroup":"区域二",
+              "variable":"选择变量二"
+            }
+          }
+        ],
+        "firstNode":false,
+        "secondNode":true,
+        "otherNode":false,
+        "form":{
+          "varLibrary":"区域一",
+          "varGroup":"区域一",
+          "variable":"选择变量一"
+        }
+      },
+      {
+        "name":"选择变量二",
+        "children":[],
+        "firstNode":false,
+        "secondNode":true,
+        "otherNode":false,
+        "form":{
+          "varLibrary":"区域二",
+          "varGroup":"区域二",
+          "variable":"选择变量二"
+        }
+      }
+    ],
+    "firstNode":true,
+    "secondNode":false,
+    "otherNode":false,
+    "form":{
+      "name":"规则组名称"
+    }
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "success": true,
+  "data": [
+    {
+      "menu": {
+        "id": 1,
+        "createdBy": "jha-admin",
+        "createdAt": "2018-09-20 16:57:38",
+        "updatedBy": "system",
+        "updatedAt": "2018-11-26 20:20:23",
+        "version": 3,
+        "appKey": "zcx-account",
+        "menuName": "模型配置",
+        "menuCode": "2cc09cd97d3d5b581809201657380411",
+        "menuType": "10",
+        "menuStatus": "20",
+        "menuSort": 1,
+        "menuLevel": 1
+      },
+      "childList": [
+        {
+          "menu": {
+            "id": 11,
+            "createdBy": "jha-admin",
+            "createdAt": "2018-09-20 16:58:02",
+            "updatedBy": "system",
+            "updatedAt": "2018-11-26 20:20:23",
+            "version": 3,
+            "appKey": "zcx-account",
+            "menuName": "风控模型",
+            "menuCode": "84995759107133761809201658010642",
+            "parentCode": "2cc09cd97d3d5b581809201657380411",
+            "menuType": "20",
+            "menuStatus": "20",
+            "menuSort": 1,
+            "menuLevel": 2,
+            "menuUrl": "/model/list"
+          }
+        }
+      ]
+    },
+    {
+      "menu": {
+        "id": 2,
+        "createdBy": "jha-admin",
+        "createdAt": "2018-09-20 16:57:38",
+        "updatedBy": "system",
+        "updatedAt": "2018-11-26 20:20:23",
+        "version": 3,
+        "appKey": "zcx-account",
+        "menuName": "风险变量管理",
+        "menuCode": "2cc09cd97d3d5b581809201657380412",
+        "menuType": "10",
+        "menuStatus": "20",
+        "menuSort": 1,
+        "menuLevel": 1
+      },
+      "childList": [
+        {
+          "menu": {
+            "id": 21,
+            "createdBy": "jha-admin",
+            "createdAt": "2018-09-20 16:58:02",
+            "updatedBy": "system",
+            "updatedAt": "2018-11-26 20:20:23",
+            "version": 3,
+            "appKey": "zcx-account",
+            "menuName": "变量库",
+            "menuCode": "84995759107133761809201658010643",
+            "parentCode": "2cc09cd97d3d5b581809201657380412",
+            "menuType": "20",
+            "menuStatus": "20",
+            "menuSort": 1,
+            "menuLevel": 2,
+            "menuUrl": "/variable/list"
+          }
+        }
+      ]
+    }
+  ]
+}
